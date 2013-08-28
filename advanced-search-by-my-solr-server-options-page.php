@@ -317,6 +317,7 @@ none
 			FROM $wpdb->postmeta
 			GROUP BY meta_key
 			HAVING meta_key NOT LIKE '\_%'
+			OR meta_key LIKE '%price%'
 			ORDER BY meta_key" );
 
 	if ($keys) {
